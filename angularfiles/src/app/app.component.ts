@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FileService } from './file.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularfiles';
+  public images: any = [];
+  constructor(private fileService: FileService){}
+  ngOnInit(){
+    this.fileService.getimages().subscribe(response => {
+      this.images = response;
+    });
+  }
+
 }
