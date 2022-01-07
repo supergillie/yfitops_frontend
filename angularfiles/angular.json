@@ -28,7 +28,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "../node_modules/bootstrap/dist/css/bootstrap.min.csns"
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "../node_modules/jquery/dist/jquery.min.js"
@@ -103,19 +103,6 @@
               "src/styles.css"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {

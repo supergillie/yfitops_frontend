@@ -11,7 +11,7 @@ export class AppComponent {
   public images: any = [];
   constructor(private fileService: FileService){}
   ngOnInit(){
-    this.fileService.getimages().subscribe(response => {
+    this.fileService.getImages().subscribe(response => {
       this.images = response;
     });
   }

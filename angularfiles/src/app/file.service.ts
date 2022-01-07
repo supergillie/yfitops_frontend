@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FileService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   getImages() : Observable<any> {
     return this.http.get('http://localhost:8080/getImages');
   }
